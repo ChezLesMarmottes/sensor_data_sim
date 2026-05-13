@@ -1,15 +1,7 @@
 #include <stdio.h>
 
 int main(void) {
-    puts("Hello from C project");
+    //SensorBuffer buffer = {{0}, 0, 0};
     return 0;
 }
-
-
-
-
-
-
-
-
 
