@@ -5,7 +5,7 @@ TARGET := build/app
 SRC := $(shell find src -type f -name '*.c' | sort)
 OBJ := $(patsubst src/%.c,build/%.o,$(SRC))
 DEP := $(OBJ:.o=.d)
-LDLIBS :=
+LDLIBS := -lm
 
 all: $(TARGET)
 

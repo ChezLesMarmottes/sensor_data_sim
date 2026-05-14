@@ -1,7 +1,8 @@
 #include <stdlib.h>
+#include <math.h>
 
 int is_anomaly(double current, double avg) {
-    if (abs(current - avg) > 1.5f) {
+    if (fabs(current - avg) > 1.5) {
         return 1;
     }
     else {
