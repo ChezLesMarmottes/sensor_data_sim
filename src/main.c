@@ -1,8 +1,8 @@
-#include "statistics.h"
 #include "anomaly.h"
-#include "sensor.h"
 #include "buffer.h"
+#include "sensor.h"
 #include "sensor_buffer_struct.h"
+#include "statistics.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,23 +16,14 @@ int main(void) {
     int bool_input, bool_is_anomaly, tick = 1;
     SensorBuffer buffer = {{0}, 0, 0};
 
-    puts("Press 1 to start measuring, press Ctrl/Cmd + C to stop\n");
-    if (scanf("%d", bool_input) != 1) {
-        puts("Invalid input\n");
-    }
-
-    if (!bool_input) {
-        return 0;
-    }
-
     while (1) {
         // Getting info about measurement
         temp = read_sensor();
+        bool_is_anomaly = is_anomaly(temp, avg_temp);
         add_reading(temp, &buffer);
         avg_temp = compute_average(&buffer);
         min_temp = compute_min(&buffer);
         max_temp = compute_max(&buffer);
-        bool_is_anomaly = is_anomaly(temp, avg_temp);
 
         // Printing info to CLI
         printf("\nTick %d\n", tick);
@@ -47,7 +38,7 @@ int main(void) {
         );
 
         if (bool_is_anomaly) {
-            puts("\nWARNING: anomaly detected\n");
+            puts("\nWARNING: anomaly detected");
         }
 
         sleep(1);

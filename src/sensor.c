@@ -1,7 +1,7 @@
 #include "gaussian.h"
 
 double read_sensor(void) {
-    double temp, mu = 22.0, sigma = 0.5;
+    double temp, mu = 22.0, sigma = 1.0;
     
     temp = generate_gaussian_noise(mu, sigma);
 
