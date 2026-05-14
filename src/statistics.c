@@ -1,7 +1,7 @@
 #include "sensor_buffer_struct.h"
 
-float compute_average(SensorBuffer *buffer) {
-    float avg, sum_values = 0;
+double compute_average(SensorBuffer *buffer) {
+    double avg, sum_values = 0;
 
     for (int i = 0; i < buffer->count, i++;) {
         sum_values += buffer->values[i];
@@ -11,5 +11,5 @@ float compute_average(SensorBuffer *buffer) {
 }
 
 
-float compute_min();
-float compute_max();
+double compute_min();
+double compute_max();

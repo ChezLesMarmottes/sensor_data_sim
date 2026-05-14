@@ -1,12 +1,16 @@
 #include <stdlib.h>
 #include <time.h>
 
-float read_sensor(void) {
-    float temp, base, noise;
+double  read_sensor(void) {
+    double temp, base, noise;
     
     srand(time(0));
 
     base = 22;
-    noise = ((float) rand() / (float) RAND_MAX) - 0.5f;
+    noise = ((double) rand() / (double) RAND_MAX) - 0.5f;
     temp = base + noise;
+}
+
+double generate_gaussian_noise(void) {
+    
 }

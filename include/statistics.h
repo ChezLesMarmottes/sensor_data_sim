@@ -3,8 +3,8 @@
 
 #include "sensor_buffer_struct.h"
 
-float compute_average(SensorBuffer *buffer);
-float compute_min();
-float compute_max();
+double compute_average(SensorBuffer *buffer);
+double compute_min();
+double compute_max();
 
 #endif

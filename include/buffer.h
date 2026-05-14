@@ -3,6 +3,6 @@
 
 #include "sensor_buffer_struct.h"
 
-void add_reading(float value, SensorBuffer *buffer);
+void add_reading(double value, SensorBuffer *buffer);
 
 #endif

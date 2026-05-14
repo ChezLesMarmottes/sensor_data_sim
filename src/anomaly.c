@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-int is_anomaly(float current, float avg) {
+int is_anomaly(double current, double avg) {
     if (abs(current - avg) > 1.5f) {
         return 1;
     }
