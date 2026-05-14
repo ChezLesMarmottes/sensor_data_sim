@@ -4,7 +4,7 @@
 #include "sensor_buffer_struct.h"
 
 double compute_average(SensorBuffer *buffer);
-double compute_min();
-double compute_max();
+double compute_min(SensorBuffer *buffer);
+double compute_max(SensorBuffer *buffer);
 
 #endif
