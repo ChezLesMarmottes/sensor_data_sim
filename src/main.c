@@ -13,7 +13,7 @@ int main(void) {
     srand(time(0));
 
     double temp = 0, avg_temp = 0, min_temp = 0, max_temp = 0;
-    int bool_input, bool_is_anomaly, tick = 1;
+    int bool_is_anomaly, tick = 1;
     SensorBuffer buffer = {{0}, 0, 0};
 
     while (1) {
